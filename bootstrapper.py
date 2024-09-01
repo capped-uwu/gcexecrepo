@@ -46,15 +46,14 @@ def run_ui_exe():
     ui_exe_path = os.path.join(GCEDEXC_DIR, 'ui.exe')
     if os.path.exists(ui_exe_path):
         try:
-            # ui.exeをバックグラウンドで実行
-            subprocess.Popen([ui_exe_path])
+            subprocess.Popen([ui_exe_path], cwd=GCEDEXC_DIR)
             print(f"Executed {ui_exe_path}")
         except subprocess.CalledProcessError as e:
             print(f"Error executing {ui_exe_path}: {e}")
             sys.exit(1)
     else:
         print(f"{ui_exe_path} not found")
-    sys.exit(0)  # ui.exeがバックグラウンドで実行された後にスクリプトを終了
+    sys.exit(0)
 
 def main():
     if not os.path.exists(GCEDEXC_DIR):
