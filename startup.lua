@@ -1,7 +1,10 @@
--- Gui to Lua
--- Version: 3.2
+local StarterGui = game:GetService("StarterGui")
 
--- Instances:
+StarterGui:SetCore("SendNotification", {
+	Title = "GC EXEC",
+	Text = "V 3.0.1 loaded.",
+	Duration = 20,
+})
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -19,8 +22,6 @@ local dragToggle = nil
 local dragSpeed = 0.25
 local dragStart = nil
 local startPos = nil
-
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -148,3 +149,4 @@ UIS.InputChanged:Connect(function(input)
 	end
 
 end)
+
