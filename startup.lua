@@ -150,3 +150,6 @@ UIS.InputChanged:Connect(function(input)
 
 end)
 
+print("GC EXEC")
+print("V 3.0.1")
+print("LOADED!")
