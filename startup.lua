@@ -33,6 +33,7 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.410129994, 0, 0.346625775, 0)
 Frame.Size = UDim2.new(0.207792208, 0, 0.30674848, 0)
+Frame.ZIndex = 2147483647
 
 Title.Name = "Title"
 Title.Parent = Frame
